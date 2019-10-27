@@ -1,0 +1,67 @@
+Algoritmo "Estrutura de menu"
+
+
+Var
+
+   opcao, invalida, opcaodois: caractere
+   repeticao , repeticaodois: logico
+
+
+
+Inicio
+
+   //Estrutura menu
+   repeticao <- verdadeiro
+   Repita
+      Limpatela
+      Escreval ("Menu")
+      Escreval (" ")
+      Escreval ("1) primeira opção ")
+      Escreval ("2) segunda opção ")
+      Escreval ("3) terceira opção ")
+      Escreval ("9) opção para encerrar o programa ")
+      Escreval (" ")
+      Escreva ("Escolha uma das opções acima: ")
+      Leia (opcao)
+      Escreval (" ")
+
+      Escolha opcao
+
+      Caso "1"
+         //algoritmo para a primeira opção
+
+
+         //sair do programa
+         repeticao <- falso
+
+      Caso "2"
+         //algoritmo para a segunda opção
+
+
+         //sair do programa
+         repeticao <- falso
+
+      Caso "3"
+         //algoritmo para a terceira opção
+
+
+         //sair do programa
+         repeticao <- falso
+
+      Caso "9"
+         //saída do menu
+         repeticao <- falso
+
+      outrocaso
+         //Nenhuma das opções acima
+         Limpatela
+         Escreval (">>> A opção escolhida é inválida aperte [enter] para retornar ao ")
+         Escreva ("menu ")
+         Leia (invalida)
+         Escreva (" ")
+
+      fimescolha
+
+   Ate (repeticao = falso)
+
+Fimalgoritmo
