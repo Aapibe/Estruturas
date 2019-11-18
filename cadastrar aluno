@@ -1,0 +1,97 @@
+Algoritmo "semnome"
+// Disciplina  :  [Linguagem e Lógica de Programação]
+// Professor   : Enzo
+// Autor(a)    : Natan Santana de Vasconcelos
+// Data atual  : 18/11/2019
+Var
+
+   nota : vetor[1..10,1..5] de real
+   dados : vetor[1..10,1..5] de caractere
+   repeticao : logico
+   opcao, x, aluno : caractere
+   i, y, l : inteiro
+
+Inicio
+   repeticao <- verdadeiro
+   enquanto repeticao faca
+      limpatela
+      Escreval ("Menu ")
+      Escreval (" ")
+      Escreval ("[1] Cadastrar um aluno")
+      Escreval ("[2] Alterar nota de um aluno")
+      Escreval ("[3] Excluir um aluno")
+      Escreval ("[4] Relatorio")
+      Escreval ("[5] Sair ")
+      Escreval (" ")
+
+      Escreva ("Escolha uma das opções acima: ")
+      leia (opcao)
+
+      Escolha opcao
+
+      Caso "1"
+         limpatela
+         i <- 1
+         i <- i + y
+         Escreva ("Insira o nome do aluno: ")
+         leia (dados[i,1])
+         Escreval (" ")
+         Escreva ("Insira o nome do pai do aluno: ")
+         leia (dados[i,2])
+         Escreval (" ")
+         Escreva ("Insira o nome da mãe do aluno: ")
+         leia (dados[i,3])
+         Escreval (" ")
+         Escreva ("Insira a cidade do aluno: ")
+         leia (dados[i,4])
+         Escreval (" ")
+         Para l de 1 ate 4 faca
+            Escreval ("Insira a", l,"° nota do aluno")
+            leia (nota[i,l])
+         fimpara
+         nota[i,5] <- ( nota[i,1] + nota[i,2] + nota[i,3] + nota[i,4] )/ 4
+         Se  (nota[i,5]>= 6) entao
+            dados[i,5] <- "Aprovado"
+         fimse
+         Se (nota[i,5]< 6) e (nota[i,5]>=4) entao
+            dados[i,5] <- "Recuperação"
+         fimse
+         Se (nota[i,5]<4) entao
+            dados[i,5] <- "Reprovado"
+         fimse
+         y <- y + 1
+
+      Caso "2"
+         limpatela
+         Para l de 1 ate 10 faca
+         Escreval (l,"° aluno:", dados[l,1])
+         Escreval (" ")
+         fimpara
+         
+         Escreva ("Escolha o número de um aluno para alterar a nota: ")
+         leia (aluno)
+
+
+
+
+      Caso "3"
+
+      Caso "4"
+
+      Caso "5"
+         repeticao <- falso
+
+      Outrocaso
+         Limpatela
+         Escreval (">>>A opção inserida é invalida")
+         Escreval (" ")
+         Escreva (">>>Aperte [enter] para continuar ")
+         leia (x)
+
+      fimescolha
+
+
+
+   fimenquanto
+
+Fimalgoritmo
