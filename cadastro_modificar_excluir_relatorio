@@ -1,0 +1,159 @@
+Algoritmo "semnome"
+// Disciplina  :  [Linguagem e Lógica de Programação]
+// Professor   : Enzo
+// Autor(a)    : Natan Santana de Vasconcelos
+// Data atual  : 18/11/2019
+Var
+
+   nota : vetor[1..10,1..5] de real
+   dados : vetor[1..10,1..5] de caractere
+   repeticao, repeticaoa, repeticaob : logico
+   opcao, x, aluno, opcaoa : caractere
+   i, y, l : inteiro
+
+Inicio
+   repeticao <- verdadeiro
+   repeticaoa <- verdadeiro
+   repeticaob <- verdadeiro
+   enquanto repeticao faca
+      limpatela
+      Escreval ("Menu ")
+      Escreval (" ")
+      Escreval ("[1] Cadastrar um aluno")
+      Escreval ("[2] Alterar nota de um aluno")
+      Escreval ("[3] Excluir um aluno")
+      Escreval ("[4] Relatorio")
+      Escreval ("[5] Sair ")
+      Escreval (" ")
+
+      Escreva ("Escolha uma das opções acima: ")
+      leia (opcao)
+
+      Escolha opcao
+
+      Caso "1"
+      
+         limpatela
+         i <- 1
+         i <- i + y
+         Escreva ("Insira o nome do aluno: ")
+         leia (dados[i,1])
+         Escreval (" ")
+         Escreva ("Insira o nome do pai do aluno: ")
+         leia (dados[i,2])
+         Escreval (" ")
+         Escreva ("Insira o nome da mãe do aluno: ")
+         leia (dados[i,3])
+         Escreval (" ")
+         Escreva ("Insira a cidade do aluno: ")
+         leia (dados[i,4])
+         Escreval (" ")
+         Para l de 1 ate 4 faca
+            repeticaoa <- verdadeiro
+            Enquanto repeticaoa faca
+               Escreva ("Insira a", l,"° nota do aluno: ")
+               leia (nota[i,l])
+               Se (nota[i,l] < 0) ou (nota[i,l] > 10) entao
+                  Escreval (" ")
+                  Escreval (">>>O Valor inserido é invalido, a nota deve ser um valor entre")
+                  Escreval ("1 e 10 ")
+                  Escreval (" ")
+               senao
+                  repeticaoa <- falso
+               fimse
+            fimenquanto
+         fimpara
+         y <- y + 1
+
+      Caso "2"
+      
+         Enquanto repeticaob faca
+            limpatela
+            Para l de 1 ate 10 faca
+               Escreval (l,"° aluno: ", dados[l,1]," Notas:",nota[l,1], nota[l,2], nota[l,3], nota[l,4])
+            fimpara
+
+            Escreval (" ")
+            Escreva ("Escolha o número de um aluno para alterar a nota: ")
+            leia (i)
+            Escreval (" ")
+            Escreval ("[1]Alterar a primeira nota")
+            Escreval ("[2]Alterar a segunda nota")
+            Escreval ("[3]Alterar a terceira nota")
+            Escreval ("[4]Alterar a quarta nota")
+            Escreval ("[5]Voltar para o menu")
+            Escreval (" ")
+            Escreva ("Escolha qual nota deseja alterar: ")
+            leia (opcao)
+
+            Escolha opcao
+            Caso "1"
+               Escreval ("Insira a primeira nota do aluno: ")
+               leia (nota[i,1])
+            Caso "2"
+               Escreval ("Insira a segunda nota do aluno: ")
+               leia (nota[i,2])
+            Caso "3"
+               Escreval ("Insira a terceira nota do aluno: ")
+               leia (nota[i,3])
+            Caso "4"
+               Escreval ("Insira a quarta nota do aluno: ")
+               leia (nota[i,4])
+            Caso "5"
+               repeticaob <- falso
+            Outrocaso
+               Limpatela
+               Escreval (">>>A opção inserida é invalida")
+               Escreval (" ")
+               Escreva (">>>Aperte [enter] para continuar ")
+               leia (x)
+            fimescolha
+         fimenquanto
+
+      Caso "3"
+
+      Caso "4"
+      
+         Limpatela
+         Para i de 1 ate 10 faca
+            nota[i,5] <- ( nota[i,1] + nota[i,2] + nota[i,3] + nota[i,4] )/ 4
+            Se  (nota[i,5]>= 6) entao
+               dados[i,5] <- "Aprovado"
+            fimse
+            Se (nota[i,5]< 6) e (nota[i,5]>=4) entao
+               dados[i,5] <- "Recuperação"
+            fimse
+            Se (nota[i,5]<4) entao
+               dados[i,5] <- "Reprovado"
+            fimse
+            Escreval ("--------------------------------")
+            Escreval ("Aluno: ", dados[i,1])
+            Escreval ("Nome do Pai: ", dados[i,2])
+            Escreval ("Nome da Mãe: ", dados[i,3])
+            Escreval ("Cidade: ", dados[i,4])
+            Escreval (" ")
+            Escreval ("Notas:",nota[i,1], nota[i,2], nota[i,3], nota[i,4])
+            Escreval ("Média Final:", nota[i,5])
+            Escreval ("Situação:", dados[i,5])
+         fimpara
+
+         Escreval ("--------------------------------")
+         Escreval (" ")
+         Escreva (">>>Aperte [enter] para continuar ")
+         leia (x)
+
+      Caso "5"
+         repeticao <- falso
+
+      Outrocaso
+         Limpatela
+         Escreval (">>>A opção inserida é invalida")
+         Escreval (" ")
+         Escreva (">>>Aperte [enter] para continuar ")
+         leia (x)
+
+      fimescolha
+      
+   fimenquanto
+
+Fimalgoritmo
