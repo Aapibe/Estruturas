@@ -32,7 +32,7 @@ Inicio
       Escolha opcao
 
       Caso "1"
-      
+
          limpatela
          i <- 1
          i <- i + y
@@ -66,7 +66,7 @@ Inicio
          y <- y + 1
 
       Caso "2"
-      
+
          Enquanto repeticaob faca
             limpatela
             Para l de 1 ate 10 faca
@@ -88,17 +88,61 @@ Inicio
 
             Escolha opcao
             Caso "1"
-               Escreval ("Insira a primeira nota do aluno: ")
-               leia (nota[i,1])
+               repeticaoa <- verdadeiro
+               Enquanto repeticaoa faca
+                  Escreva ("Insira a nova primeira nota do aluno: ")
+                  leia (nota[i,1])
+                  Se (nota[i,1] < 0) ou (nota[i,1] > 10) entao
+                     Escreval (" ")
+                     Escreval (">>>O Valor inserido é invalido, a nota deve ser um valor entre")
+                     Escreval ("1 e 10 ")
+                     Escreval (" ")
+                  senao
+                     repeticaoa <- falso
+                  fimse
+               fimenquanto
             Caso "2"
-               Escreval ("Insira a segunda nota do aluno: ")
-               leia (nota[i,2])
+               repeticaoa <- verdadeiro
+               Enquanto repeticaoa faca
+                  Escreva ("Insira a nova segunda nota do aluno: ")
+                  leia (nota[i,2])
+                  Se (nota[i,2] < 0) ou (nota[i,2] > 10) entao
+                     Escreval (" ")
+                     Escreval (">>>O Valor inserido é invalido, a nota deve ser um valor entre")
+                     Escreval ("1 e 10 ")
+                     Escreval (" ")
+                  senao
+                     repeticaoa <- falso
+                  fimse
+               fimenquanto
             Caso "3"
-               Escreval ("Insira a terceira nota do aluno: ")
-               leia (nota[i,3])
+               repeticaoa <- verdadeiro
+               Enquanto repeticaoa faca
+                  Escreva ("Insira a nova terceira nota do aluno: ")
+                  leia (nota[i,3])
+                  Se (nota[i,3] < 0) ou (nota[i,3] > 10) entao
+                     Escreval (" ")
+                     Escreval (">>>O Valor inserido é invalido, a nota deve ser um valor entre")
+                     Escreval ("1 e 10 ")
+                     Escreval (" ")
+                  senao
+                     repeticaoa <- falso
+                  fimse
+               fimenquanto
             Caso "4"
-               Escreval ("Insira a quarta nota do aluno: ")
-               leia (nota[i,4])
+               repeticaoa <- verdadeiro
+               Enquanto repeticaoa faca
+                  Escreva ("Insira a nova quarta nota do aluno: ")
+                  leia (nota[i,4])
+                  Se (nota[i,4] < 0) ou (nota[i,4] > 10) entao
+                     Escreval (" ")
+                     Escreval (">>>O Valor inserido é invalido, a nota deve ser um valor entre")
+                     Escreval ("1 e 10 ")
+                     Escreval (" ")
+                  senao
+                     repeticaoa <- falso
+                  fimse
+               fimenquanto
             Caso "5"
                repeticaob <- falso
             Outrocaso
@@ -113,7 +157,7 @@ Inicio
       Caso "3"
 
       Caso "4"
-      
+
          Limpatela
          Para i de 1 ate 10 faca
             nota[i,5] <- ( nota[i,1] + nota[i,2] + nota[i,3] + nota[i,4] )/ 4
@@ -153,7 +197,7 @@ Inicio
          leia (x)
 
       fimescolha
-      
+
    fimenquanto
 
 Fimalgoritmo
