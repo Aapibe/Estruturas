@@ -1,0 +1,36 @@
+Algoritmo "Q2_CB3004708_Natan_Santana_de_Vasconcelos"
+// Disciplina  :  [Linguagem e Lógica de Programação]
+// Professor   : Enzo Bertazini
+// Descrição   : Apos digiatr o nome completo de uma pessoa, entra com
+//uma letra qualquer e volta aa posições daa letras no nome da pessoa, ou não
+//volta nada.
+// Autor(a)    : Natan Santana de Vasconcelos
+// Data atual  : 09/12/2019
+Var
+
+   Nome, Letra, x: Caractere
+   teste: logico
+   nletras, z: inteiro
+Inicio
+   teste <- verdadeiro
+
+   //nome
+   Escreva("Entre com um nome qualquer: ")
+   Leia (Nome)
+
+   //letra qualquer
+      Escreval (" ")
+      Escreva ("Entre com uma letra qualquer: ")
+      Leia (Letra)
+  
+   
+   //aonde está a letra
+   z <- Pos(Letra,Nome)
+   Se (z = 0) entao
+    Escreval ("A letra escolhida não se encontra no nome!")
+   senao
+   Escreval (" ")
+   Escreva ("A letra escolhida se encontra na posição:", z)
+   fimse
+
+Fimalgoritmo
