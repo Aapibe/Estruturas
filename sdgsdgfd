@@ -1,0 +1,80 @@
+Algoritmo "semnome"
+// Disciplina  :  [Linguagem e Lógica de Programação]
+// Professor   : Antonio Carlos Nicolodi
+// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Autor(a)    : Nome do(a) aluno(a)
+// Data atual  : 10/12/2019
+Var
+   // Seção de Declarações das variáveis
+
+   x,y:vetor[1..10] de real // conjuntos
+
+   z,k:vetor[0..20] de real // união
+
+   i,j,cont,conti,m,n:inteiro
+
+   C:vetor[0..20] de real
+
+   v:real
+
+Inicio
+
+   //Primeiro Conjunto
+   para i de 1 ate 10 faca
+      escreva(" Digite o ",i," numero do A conjunto:")
+      leia(x[i])
+      j<-j+1
+      z[j]<-x[i]
+   fimpara
+   
+
+   //Segundo Conjunto
+   para i de 1 ate 10 faca
+      escreva(" Digite o ",i," numero do B conjunto:")
+      leia(y[i])
+      j<-j+1
+      z[j]<-y[i]
+   fimpara
+
+   //união
+   m<-1
+   para i de 1 ate 20 faca
+      para j de i+1 ate 20 faca
+         se z[i]=z[j] entao
+            cont<-1+cont
+         fimse
+      fimpara
+      se cont=0 entao
+         n<-n+1
+         k[n]<-z[i]
+      senao
+         m<-m+1
+         k[21-m]<-z[i]
+         conti<-conti+1
+      fimse
+      cont<-0
+   fimpara
+
+   conti<-20-(conti)
+
+   escreva ( " Os elementos da união são: ")
+   para i de 1 ate conti faca
+      escreva(k[i])
+   fimpara
+
+   //intersecção
+   para i de 1 ate 10 faca
+      para j de 1 ate 10 faca
+         se (x[i]=y[j]) entao
+            k[cont]<-x[i]
+            cont<-cont+1
+         fimse
+      fimpara
+   fimpara
+   escreval("")
+   Escreva ( " Os elementos da intersecção de A e B é: ")
+   para i de 0 ate cont-1 faca
+      Escreva (k[i])
+   fimpara
+
+Fimalgoritmo
